@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STAB", "STAB\STAB.csproj", "{9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{79486402-7DCB-4611-894F-29B72FC22FF8} = {79486402-7DCB-4611-894F-29B72FC22FF8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STAB.Injector", "STAB.Injector\STAB.Injector.csproj", "{10CF9106-130D-4097-97ED-1155F574CAC3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12583B36-BD81-4B35-8735-9FD2F1C924F8} = {12583B36-BD81-4B35-8735-9FD2F1C924F8}
+		{9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E} = {9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "STAB.Bootstrap", "STAB.Bootstrap\STAB.Bootstrap.vcxproj", "{12583B36-BD81-4B35-8735-9FD2F1C924F8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E} = {9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mods", "Mods", "{BA63A14B-346C-448C-91F5-BDD05312C8D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STAB.RemoveCausticLandsHue", "Mods\STAB.RemoveCausticLandsHue\STAB.RemoveCausticLandsHue.csproj", "{79486402-7DCB-4611-894F-29B72FC22FF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDE91B1-13EF-44AC-80B9-4AEFEF212C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10CF9106-130D-4097-97ED-1155F574CAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10CF9106-130D-4097-97ED-1155F574CAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10CF9106-130D-4097-97ED-1155F574CAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10CF9106-130D-4097-97ED-1155F574CAC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12583B36-BD81-4B35-8735-9FD2F1C924F8}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{12583B36-BD81-4B35-8735-9FD2F1C924F8}.Debug|Any CPU.Build.0 = Debug|x64
+		{12583B36-BD81-4B35-8735-9FD2F1C924F8}.Release|Any CPU.ActiveCfg = Release|x64
+		{12583B36-BD81-4B35-8735-9FD2F1C924F8}.Release|Any CPU.Build.0 = Release|x64
+		{79486402-7DCB-4611-894F-29B72FC22FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79486402-7DCB-4611-894F-29B72FC22FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79486402-7DCB-4611-894F-29B72FC22FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79486402-7DCB-4611-894F-29B72FC22FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79486402-7DCB-4611-894F-29B72FC22FF8} = {BA63A14B-346C-448C-91F5-BDD05312C8D7}
+	EndGlobalSection
+EndGlobal

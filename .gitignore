@@ -1,0 +1,7 @@
+Directory.Build.props
+*.suo
+*.user
+bin
+obj
+x64
+.vs
