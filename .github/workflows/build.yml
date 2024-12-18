@@ -1,0 +1,40 @@
+name: Build
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0'
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+      - name: Restore packages
+        run: dotnet restore ./STAB.sln
+      - name: Build solution
+        run: msbuild ./STAB.sln /p:Configuration=Release /m
+      - name: Prepare output directory
+        shell: powershell
+        run: |
+          if (Test-Path output) { Remove-Item -Recurse -Force output }
+          New-Item -ItemType Directory -Path output | Out-Null
+          New-Item -ItemType Directory -Path output\Mods | Out-Null
+      - name: Copy files to output directory
+        shell: powershell
+        run: |
+          Copy-Item "STAB\bin\Release\*.dll" "output\" -Force
+          Copy-Item "x64\Release\*.dll" "output\" -Force
+          Copy-Item "STAB.Injector\bin\Release\*" "output\" -Force -Include *.exe,*.dll,*.runtimeconfig.json
+          Copy-Item "Mods\*\bin\Release\*.dll" "output\Mods" -Force
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: STAB
+          path: output/*

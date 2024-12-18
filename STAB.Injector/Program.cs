@@ -95,3 +95,6 @@ if (threadHandle == nint.Zero)
 }
 
 Console.WriteLine("STAB injected successfully!");
+
+Console.WriteLine("Press any key to exit...");
+Console.ReadKey();

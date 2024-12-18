@@ -12,10 +12,4 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y &quot;$(ProjectDir)..\STAB\bin\$(Configuration)\STAB.dll&quot; &quot;$(TargetDir)&quot;" />
-    <Exec Command="xcopy /y &quot;$(ProjectDir)..\x64\$(Configuration)\*.dll&quot; &quot;$(TargetDir)&quot;" />
-    <Exec Command="for /R &quot;$(ProjectDir)..\Mods&quot; %%f in (STAB.*.dll) do xcopy /y &quot;%%f&quot; &quot;$(TargetDir)\Mods&quot;" />
-  </Target>
-
 </Project>
